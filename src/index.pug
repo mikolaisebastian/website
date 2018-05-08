@@ -1,0 +1,212 @@
+doctype html
+html
+    head
+        link(rel='icon' href='favicon.ico' type='image/x-icon')
+
+        title Pterodactyl - The Free Gameserver Management Panel
+        meta(name='description' content='Pterodactyl - The free game server management panel with support for Minecraft, CS:GO, Team Fortress 2, Teamspeak, and Mumble.')
+        
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+
+        link(rel='stylesheet' href='assets/css/main.css')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins')
+
+    body.bg-blue.text-black.leading-normal
+        nav#nav.fixed.text-white.z-50.pin-t.w-full.rounded-b-lg
+            .container.p-8.mx-auto.flex.flex-wrap
+                span.text-3xl.uppercase Pterodactyl
+                .flex-grow
+                .block(class='lg:hidden')
+                    button#nav-toggle.flex.items-center.px-3.py-2.btn(style='margin: 0;')
+                        svg.fill-current.h-4.w-8(viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg')
+                            title Menu
+                            path(d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z')
+
+                div#nav-items.w-full.hidden(class='lg:flex lg:w-auto lg:visible')
+                    a(href='#home') Home
+                    a(href='#about') About
+                    a(href='#features') Features
+                    a(href='#screenshots') Screenshots
+                    a(href='https://pterodactyl.io/discord') Discord
+                    a(href='https://docs.pterodactyl.io') Docs
+                    a(href='https://blog.pterodactyl.io') Blog
+        .header.section.bg-blue.text-white(name='home')
+            .container.relative.z-10
+                .text-center.mt-8
+                    div: img(src='assets/images/logo-icon.png').max-w-xs
+                    h1.font-normal.text-4xl The Free Gameserver Management Panel
+                    div.mt-4
+                        a.btn(href='https://docs.pterodactyl.io') Documentation
+                        a.btn(href='https://github.com/pterodactyl/panel') GitHub
+                        a.btn(href='https://demo.pterodactyl.io' target='_blank') Demo
+            #particles-js.absolute.pin.z-0
+
+        .section.bg-white.rounded-lg(name='about')
+            .container.text-center
+                h1.text-blue.mb-4 Pterodactyl Panel
+
+                p Pterodactyl Panel is the free, open-source, game agnostic, self-hosted control panel for users, networks, and game service providers. Pterodactyl supports games and servers such as Minecraft (including Spigot, Bungeecord, and Sponge), ARK: Evolution Evolved, CS:GO, Team Fortress 2, Insurgency, Teamspeak 3, Mumble, and many more. Control all of your games from one unified interface.
+
+                img(src='assets/images/mockup-macbook-grey.png').max-w-lg.w-full.m-4
+        
+        .section.bg-blue.text-white(name='features')
+            .container.text-center
+                h1.mb-4 Why Pterodactyl
+
+                .flex.flex-wrap
+                    .feature 
+                        span: i.icon.icon-lock
+                        h3 Secure
+                        | No MD5 here. We make use of the latest security standards such as BCrypt hashing and AES-256-CBC encryption.
+                    
+                    .feature 
+                        span: i.icon.icon-browser
+                        h3 Themable
+                        | Every aspect of Pterodactyl is fully themeable using the Blade templating engine and your own CSS.
+
+                    .feature 
+                        span: i.icon.icon-anchor
+                        h3 Docker Based
+                        | Pterodactyl is the first game panel to make use of Docker to control servers and harden your network.
+
+                    .feature 
+                        span: i.icon.icon-wallet
+                        h3 Free & Open Source
+                        | Pterodactyl is 100% free and licensed under a MIT license. All of our code is completely open source as well.
+
+                    .feature 
+                        span: i.icon.icon-beaker
+                        h3 User Friendly
+                        | Furious clicking and yelling is for video games. Pterodactyl's interface is so simple that even <a href="http://fallout.wikia.com/wiki/Dogmeat_(Fallout)">Dogmeat</a> could use it.
+
+                    .feature 
+                        span: i.icon.icon-expand
+                        h3 Scalable
+                        | Whether you're a hosting company or some dudes playing video games, Pterodactyl has you covered.
+
+        .section.bg-white.rounded-lg(name='screenshots')
+            .text-center
+                h1 Screenshots
+
+                .screenshots
+                    div.item: img.max-w-lg(src='assets/images/gallery/api.png')
+                    div.item: img.max-w-lg(src='assets/images/gallery/console.png')
+                    div.item: img.max-w-lg(src='assets/images/gallery/file-edit.png')
+                    div.item: img.max-w-lg(src='assets/images/gallery/api.png')
+                    div.item: img.max-w-lg(src='assets/images/gallery/console.png')
+                    div.item: img.max-w-lg(src='assets/images/gallery/file-edit.png')
+        
+        .section.bg-blue.text-white
+            .container.text-center
+                h1 Get Started
+                p.m-4 Ready to fly on the Pterodactyl?
+                div.mt-4
+                    a.btn(href='https://docs.pterodactyl.io/docs/installing-1') Installation
+                    a.btn(href='https://pterodactyl.io/discord') Discord
+
+        .section.bg-black.text-white.rounded-t-lg.less-padding
+            .container
+                .flex.flex-wrap
+                    div(class='w-full lg:w-1/2').p-8
+                        img(class='w-2/3' src='assets/images/logo-foot.png')
+                        p.my-4 There are tons of options out there when it comes to self-hosted game management panels. However, you will find no panel that can compete with Pterodactyl in terms of features, customization, stability, and most of all: price.
+
+                        p.my-4 We're committed to building the best product that we can, and have been working with game management panels for almost five years now. We've seen games change, and are committed to making the most flexible, lightweight, and future proof panel that we can.
+                    
+                    div(class='w-full sm:w-1/2 lg:w-1/4').p-8
+                        h3 Useful Links
+                        ul.useful-links
+                            li: a(href='https://demo.pterodactyl.io') Demo
+                            li: a(href='https://docs.pterodactyl.io') Documentation
+                            li: a(href='https://daemon.pterodactyl.io') Daemon Docs
+                            li: a(href='https://guides.pterodactyl.io') Guides
+                            li: a(href='https://github.com/pterodactyl') GitHub
+                            li: a(href='https://pterodactyl.io/discord') Discord
+                    
+                    div(class='w-full sm:w-1/2 lg:w-1/4').p-8
+                        h3 Contact Us
+                        p.my-4: a(href='https://pterodactyl.io/discord')
+                            img.h-12(src='assets/images/discord.png')
+
+                        p.my-4 Email: <a href="mailto:support@pterodactyl.io">support@pterodactyl.io</a>
+
+                        p.my-4 The Free Gameserver Management Panel
+            
+                .pt-8.border-t.border-blue.px-8 © 2018 The Pterodactyl Project. All Rights Reserved. 
+
+        script(type='text/javascript' src='assets/js/jquery-1.12.3.min.js')
+        script(type='text/javascript' src='assets/js/slick.min.js')
+        script(type='text/javascript' src='assets/js/particles.min.js')
+        script.
+            particlesJS.load('particles-js', 'assets/js/particles.json', function() {
+                console.log('callback - particles.js config loaded');
+            });
+
+            $(function() {
+                $('.screenshots').slick({
+                    slidesToShow: 1,
+                    centerMode: true,
+                    centerPadding: '0',
+                    speed: 1000,
+                    autoplay: true,
+                    variableWidth: true,
+                    arrows: false,
+                    dots: true,
+                    pauseOnHover: false,
+                    pauseOnDotsHover: true,
+                });
+
+                const $window = $(window);
+                const $nav = $('#nav');
+
+                // toggle navigation background on scroll
+                var scrolled = false;
+                $nav.toggleClass('bg-blue-dark', $window.scrollTop() > 1)
+                $(document).on('scroll', function () {
+                    if (!scrolled) {
+                        scrolled = true;
+                        setTimeout(function () {
+                            $nav.toggleClass('bg-blue-dark', $window.scrollTop() > 1)
+                            scrolled = false;
+                        }, 100)
+                    }
+                });
+
+                // slide up mobile navigation and remove background if necessary
+                const slideMobileNavUp = function() {
+                    $navItems.slideUp(function() {
+                        $navItems.css('display', '');
+                        if ($window.scrollTop() < 1) $nav.toggleClass('bg-blue-dark', false);
+                    });
+                }
+
+                // toggle mobile navigation
+                const $navItems = $('#nav-items');
+                $('#nav-toggle').on('click', function() {
+                    if ($navItems.is(':visible')) {
+                        slideMobileNavUp();
+                    } else {
+                        $navItems.slideDown();
+                        $nav.toggleClass('bg-blue-dark', true);
+                    }
+                });
+                $('#nav-items a').on('click', function() {
+                    if ($window.width() < 992) {
+                        slideMobileNavUp();
+                    }
+                });
+
+                // smooth scroll to navigation pagelinks
+                const navHeight = $nav.height() - 2;
+                $('#nav-items a[href*="#"]').on('click', function(event) {
+                    const $target = $('[name=' + this.hash.slice(1) + ']');
+                    if ($target.length) {
+                        window.location.hash = this.hash
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: $target.offset().top - navHeight,
+                        }, 750);
+                    }
+                });
+            });
+            
