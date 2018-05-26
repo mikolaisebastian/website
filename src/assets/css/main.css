@@ -55,7 +55,7 @@ nav {
     @apply .inline-block .border-2 .border-white .m-3 .p-2 .uppercase .text-white .rounded;
     @apply .no-underline !important;
     transition: all 100ms linear;
-    
+
     &:hover {
         @apply .text-blue .bg-white;
     }
@@ -121,9 +121,9 @@ nav {
 
 .useful-links {
     @apply .p-0 .mt-4;
-    
+
     li {
-        @apply .m-0;
+        @apply .mx-0 .my-3;
         list-style: none;
 
         &::before {
