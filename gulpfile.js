@@ -12,6 +12,11 @@ const vendor = [
     'slick-carousel/slick/'
 ]
 
+function reload(done) {
+    browserSync.reload();
+    done();
+}
+
 gulp.task('clean', () => {
     return gulp.src('./build/*')
         .pipe( clean() )
@@ -54,5 +59,5 @@ gulp.task('serve', gulp.series(gulp.parallel('copy', 'html', 'css'), () => {
 
     gulp.watch('./src/assets/**/*.png', gulp.parallel('copy'))
     gulp.watch('./src/assets/css/**/*.css', gulp.parallel('css'))
-    gulp.watch('./src/**/*.pug', gulp.series('html', browserSync.reload))
+    gulp.watch('./src/**/*.pug', gulp.series('html', reload))
 }))
